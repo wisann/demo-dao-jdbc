@@ -15,9 +15,14 @@ public class Program {
 		Seller seller = sellerdao.findById(3);
 		System.out.println(seller);
 		
-		System.out.println("TESTE 2 FINDBYDEPARTMENT");
+		System.out.println("TESTE 2 FINDBYDEPARTMENT: ");
 		Department department = new Department(2,null);
 		List<Seller> list = sellerdao.findByDepartment(department);
+		for (Seller obj: list) {
+			System.out.println(obj);
+		}
+		System.out.println("TESTE 3 sellerfinall: ");
+		list = sellerdao.findAll();
 		for (Seller obj: list) {
 			System.out.println(obj);
 		}
