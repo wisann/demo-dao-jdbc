@@ -27,12 +27,17 @@ public class Program {
 		for (Seller obj: list) {
 			System.out.println(obj);
 		}
-		System.out.println("TESTE 4 new Seller: ");
-		Seller newSeller = new Seller(null, "wisan", "wisan@gmail.com", new Date(), 4000.00, department);
-		sellerdao.insert(newSeller);
-		System.out.println("inserted! new id = " + newSeller.getId());
+		//* System.out.println("TESTE 5 new Seller: ");
+		// Seller newSeller = new Seller(null, "wisan", "wisan@gmail.com", new Date(), 4000.00, department);
+		// sellerdao.insert(newSeller);
+		// System.out.println("inserted! new id = " + newSeller.getId());
+
+		System.out.println("TESTE 5 update: ");
+		seller = sellerdao.findById(7);
+		seller.setName("Wisan Erik");
+		sellerdao.update(seller);
+		System.out.println("update completed");
 
 	}
-	
 		
 }
